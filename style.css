@@ -1,0 +1,285 @@
+:root {
+  --accent: #368BD6;
+}
+
+body {
+	background-color: black;
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+}
+
+p {
+	margin: 5px;
+}
+
+a {
+	color: white;
+}
+
+hr {
+	border-color: var(--accent);
+}
+
+#bg {
+	background-color:black;
+	background-image: url("background.jpg");
+	background-position: right top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+#Setup {
+	flex-direction: column;
+	height: calc( 100% - 4em );
+	justify-content: center;
+	left: 0;
+	overflow: auto;
+	padding-bottom: 2em;
+	padding-left: 10%;
+	padding-right: 10%;
+	padding-top: 2em;
+	position: absolute;
+	top: 0;
+	width: 80%;
+}
+
+#app {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+#prayer {
+	background: rgba(0,0,0,0.5);
+	display: none;
+	flex-direction: column;
+	height: calc( 100% - 4em );
+	justify-content: center;
+	left: 0;
+	padding-bottom: 2em;
+	padding-left: 10%;
+	padding-right:10%;
+	padding-top: 2em;
+	position: absolute;
+	text-align: center;
+	top: 0;
+	width: 80%;
+}
+
+#prayerSummary {
+	color: DarkGray; 
+	font-size: 16px;
+}
+
+#prayerTitle {
+	font-size: 48px;
+}
+
+#prayerPrompt {
+	font-size: 24px;
+}
+
+#myProgress {
+	background-color: #ddd;
+	height: 10px;
+	margin-top: 20px;
+	position: relative;
+	width: 100%;
+}
+
+#myBar {
+	background-color: var(--accent);
+	height: 10px;
+	position: absolute;
+	transition-timing-function: linear;
+	width: 0;
+}
+
+/* CUSTOM SELECT */
+.custom-select {
+	margin-bottom: 10px;
+	margin-left: 5px;
+	margin-top: 5px;
+	position: relative;
+}
+
+.custom-select select {
+    display: none; /*hide original SELECT element: */
+}
+.select-selected {
+    background-color: var(--accent);
+    border-radius: 1em;
+    transition-duration: .5s;
+/*    -webkit-transition-duration: .5s; */
+}
+.select-selected:after {
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+    content: "";
+    height: 0;
+    position: absolute;
+    right: 10px;
+    top: 14px;
+    width: 0;
+}
+.select-arrow-active {
+    border-radius: 1em 1em 0 0;
+}
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+}
+.select-items div,.select-selected {
+	border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    color: #ffffff;
+    cursor: pointer;
+    margin-left: 0;
+	padding: 8px 16px;
+}
+.select-items {
+    background-color: var(--accent);
+	border-radius: 0 0 1em 1em;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 100%;
+	transform-origin: top;
+	transition-duration: .25s;
+/*    -webkit-transition-duration: .25s; */
+    z-index: 99;
+}
+
+.select-hide {
+    pointer-events: none;
+    transform: scaleY(0);
+}
+
+.select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.select .disabled {
+    background-color: #333;
+	color: #bbb;
+    cursor: default;
+}
+
+.select .disabled:hover {
+    background-color: #333;
+}
+
+/* END OF CUSTOM SELECT */
+
+/* CUSTOM CHECKBOXES */
+
+.switch {
+	display: inline-block;
+	height: 32px;
+	margin: 5px;
+	position: relative;
+	width: 58px;
+}
+
+.switch input { 
+	height: 0;
+	opacity: 0;
+	width: 0;
+}
+
+.slider {
+	background-color: #CCCCCC;
+	bottom: 0;
+	cursor: pointer;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	transition: .3s;
+/*	-webkit-transition: .3s; */
+}
+
+.slider:before {
+	background-color: #FFFFFF;
+	bottom: 3px;
+	content: "";
+	height: 26px;
+	left: 3px;
+	position: absolute;
+	transition: .3s;
+/* 	-webkit-transition: .3s; */
+	width: 26px;
+}
+
+.sliderclass {
+	align-items: center;
+	display: flex;
+
+
+}
+
+input:checked + .slider {
+	background-color: var(--accent);
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+.slider {
+	border-radius: 32px;
+}
+
+.slider:before {
+	border-radius: 50%;
+}
+
+/* END OF CUSTOM CHECKBOXES */
+
+.button {
+	background-color: #FFFFFF;
+	border: none;
+	border-radius: 8px;
+	color: black;
+	display: inline-block;
+	font-size: 24px;
+	margin: 5px;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	transition-duration: 0.4s;
+}
+
+.buttonSmall {
+	background-color: #222;
+	color: #FFF;
+	font-size: 10px;
+	padding: 5px 10px;
+}
+
+.button:hover {
+	background-color: var(--accent);	
+}
+
+.button:active {
+	background-color: var(--accent);
+}
+
+.website-counter {
+  display: flex;
+  flex-direction: column;
+  font-size: smaller;
+  padding: 10px;
+}
+

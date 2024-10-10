@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+    <meta http-equiv="CONTENT-Type" content="text/html; charset=UTF-8" />
+    <title> Prayer Prompts: Praying to hear and follow! </title>
+    <meta name="keywords" content="prayer, prayer wheel, discipleship, discipleship tool, prayer tool" />
+    <meta name="description" content="This tool is designed to help you spend quality time with God	in order to seek Him and His will." />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="100x100" href="apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="apple-touch-icon-512x512.png">
+    <script src="prompts.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-8BY1W6L42C"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  gtag('config', 'G-8BY1W6L42C');
+	</script>
+</head>
+
+<body onload="setup()">
+    <audio id="ding-audio" src="./audio/ding.mp3" preload="auto"></audio>
+	<audio id="ask-audio" src="./audio/ask.mp3" preload="auto"></audio>
+    <audio id="confess-audio" src="./audio/confess.mp3" preload="auto"></audio>
+    <audio id="done-audio" src="./audio/done.mp3" preload="auto"></audio>
+    <audio id="intercession-audio" src="./audio/intercession.mp3" preload="auto"></audio>
+    <audio id="listen-audio" src="./audio/listen.mp3" preload="auto"></audio>
+    <audio id="meditate-audio" src="./audio/meditate.mp3" preload="auto"></audio>
+    <audio id="praise-audio" src="./audio/praise.mp3" preload="auto"></audio>
+    <audio id="praytheword-audio" src="./audio/praytheword.mp3" preload="auto"></audio>
+    <audio id="readtheword-audio" src="./audio/readtheword.mp3" preload="auto"></audio>
+    <audio id="sing-audio" src="./audio/sing.mp3" preload="auto"></audio>
+    <audio id="thank-audio" src="./audio/thank.mp3" preload="auto"></audio>
+    <audio id="adoration-audio" src="./audio/adoration.mp3" preload="auto"></audio>
+    <audio id="asweforgive-audio" src="./audio/asweforgive.mp3" preload="auto"></audio>
+    <audio id="confession-audio" src="./audio/confession.mp3" preload="auto"></audio>
+    <audio id="dailybread-audio" src="./audio/dailybread.mp3" preload="auto"></audio>
+    <audio id="deliverus-audio" src="./audio/deliverus.mp3" preload="auto"></audio>
+    <audio id="family-audio" src="./audio/family.mp3" preload="auto"></audio>
+    <audio id="forgiveus-audio" src="./audio/forgiveus.mp3" preload="auto"></audio>
+    <audio id="guard-audio" src="./audio/guard.mp3" preload="auto"></audio>
+    <audio id="healing-audio" src="./audio/healing.mp3" preload="auto"></audio>
+    <audio id="increase-audio" src="./audio/increase.mp3" preload="auto"></audio>
+    <audio id="insightfulconfession-audio" src="./audio/insightfulconfession.mp3" preload="auto"></audio>
+    <audio id="love-audio" src="./audio/love.mp3" preload="auto"></audio>
+    <audio id="movement-audio" src="./audio/movement.mp3" preload="auto"></audio>
+    <audio id="notice-audio" src="./audio/notice.mp3" preload="auto"></audio>
+    <audio id="others-audio" src="./audio/others.mp3" preload="auto"></audio>
+    <audio id="ourfather-audio" src="./audio/ourfather.mp3" preload="auto"></audio>
+    <audio id="power-audio" src="./audio/power.mp3" preload="auto"></audio>
+    <audio id="protection-audio" src="./audio/protection.mp3" preload="auto"></audio>
+    <audio id="provision-audio" src="./audio/provision.mp3" preload="auto"></audio>
+    <audio id="sentimentaltime-audio" src="./audio/sentimentaltime.mp3" preload="auto"></audio>
+    <audio id="sinsoftheflesh-audio" src="./audio/sinsoftheflesh.mp3" preload="auto"></audio>
+    <audio id="submission-audio" src="./audio/submission.mp3" preload="auto"></audio>
+    <audio id="thanksgiving-audio" src="./audio/thanksgiving.mp3" preload="auto"></audio>
+    <audio id="unreached-audio" src="./audio/unreached.mp3" preload="auto"></audio>
+    <audio id="wait-audio" src="./audio/wait.mp3" preload="auto"></audio>
+    <audio id="yourkingdomcome-audio" src="./audio/yourkingdomcome.mp3" preload="auto"></audio>
+    <div id="bg"></div>
+    <div id="app">
+        <div id="Setup">
+            <h1>
+                Pray with us...
+            </h1>
+            <p>
+                It's as easy as 1, 2, 3...
+            </p>
+            <ol>
+                <li> Select how long you want to pray </li>
+                <li> Select and customize a prayer template </li>
+				<li> Click "Pray!" <span style="font-size:smaller;">(or press enter)</span> </li>
+            </ol>
+            <p>
+                Prayer prompts will appear sequentially based on the time and template you select.
+            <button type="button" class="button buttonSmall" onclick="window.location.href='about.html';"> read more </button><br />
+			<script>
+				var userAgent = navigator.userAgent;
+				if(userAgent.match(/safari/i)){document.write('To enable audio prompts on Safari, <a href="./about.html#SafariAutoPlay">click here</a>');
+						}
+			</script>
+			</p>
+            <hr />
+            <p>
+                Select how long you want to pray:
+            </p>
+            <div class="custom-select" style="width:250px;">
+                <select id="Duration" name="Duration" class="durationDiv">
+                    <option value="10"> 10 Minutes </option>
+                    <option value="15"> 15 Minutes </option>
+                    <option value="20"> 20 Minutes </option>
+                    <option value="24"> 24 Minutes </option>
+                    <option value="30"> 30 Minutes </option>
+                    <option value="36"> 36 Minutes </option>
+                    <option value="45"> 45 Minutes </option>
+                    <option value="48"> 48 Minutes </option>
+                    <option value="60"> 60 Minutes </option>
+                    <option value="90"> 90 Minutes </option>
+                    <option value="120"> 120 Minutes </option>
+                </select>
+            </div>
+            <p>
+                Select a prayer template:
+            </p>
+            <div class="custom-select" style="width:250px;" id="templateDiv" onclick="generateSliders();">
+                <select id="Template" name="Template">
+                    <option value="wheel"> Prayer Wheel </option>
+                    <option value="modwheel"> Prayer Wheel (modified) </option>
+                    <option value="acts"> ACTS </option>
+                    <option value="pray"> PRAY </option>
+                    <option value="lords"> Lord's Prayer </option>
+                    <option value="passion"> PASSION </option>
+                    <option value="shodankeh"> Shodankeh's DMM Prayer </option>
+                </select>
+            </div>
+            <div><button type="button" class="button buttonSmall" id="btnCustomize"> customize topics </button></div>
+            <div class="cboxes" id="cboxes" style="display: none;"></div>
+            <div><button type="button" id="btnPray" class="button"> Pray! </button></div>
+			<div class="website-counter"></div>
+        </div>
+        <div id="prayer">
+			<audio id="background" src="./audio/background.mp3" loop preload="auto"></audio>
+            <div id="prayerSummary"></div>
+            <div id="prayerTitle"></div>
+            <div id="prayerPrompt"></div>
+            <div id='mediaLink'></div>
+            <div id="myProgress">
+                <div id="myBar"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
